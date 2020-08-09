@@ -56,14 +56,20 @@ def insert(Hashtable, keyvalue, value):
     hash_key = Hashing(keyvalue) 
     Hashtable[hash_key].append(value) 
 
+sum_time = 0
+start_time = time.time()
+
 inp = int(random.uniform(16385, 65335))
 # Driver Code 
-insert(HashTable, 101, inp) 
-insert(HashTable, 225, inp) 
-insert(HashTable, 210, inp) 
-insert(HashTable, 93, inp) 
-insert(HashTable, 121, inp) 
-insert(HashTable, 211, inp) 
+insert(HashTable, 10, inp) 
+insert(HashTable, 25, inp) 
+insert(HashTable, 20, inp) 
+insert(HashTable, 9, inp) 
+insert(HashTable, 21, inp) 
+insert(HashTable, 21, inp) 
 
 display_hash (HashTable) 
-
+end_time = time.time()
+elapsed_time = end_time - start_time
+elapsed_time_milliSeconds = elapsed_time * 1000
+sum_time = sum_time + elapsed_time_milliSeconds
